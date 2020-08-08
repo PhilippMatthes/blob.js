@@ -1,0 +1,42 @@
+{
+  "name": "blob",
+  "version": "0.1.0",
+  "main": "dist/blob.cjs.js",
+  "module": "dist/blob.esm.js",
+  "browser": "dist/blob.umd.js",
+  "scripts": {
+    "format": "prettier \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --write",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "ts-node test/test.ts",
+    "pretest": "yarn build",
+    "precommit": "yarn build; git add dist"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-sucrase": "^3.1.0",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "rollup": "^2.23.1",
+    "rollup-plugin-terser": "^6.1.0",
+    "ts-node": "^8.10.2",
+    "tslib": "^2.0.1",
+    "typescript": "^3.9.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn precommit"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "files": [
+    "dist"
+  ]
+}
