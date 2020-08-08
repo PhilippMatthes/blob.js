@@ -1,0 +1,10 @@
+# Set the default behavior for text file attributes.
+# - Treat them as text.
+# - Ensure no CRLF line-endings, neither on checkout nor on checkin.
+* text=auto eol=lf
+
+# Denote all files that are truly binary and should not be modified.
+*.gif binary
+*.png binary
+*.jpg binary
+*.jpeg binary
