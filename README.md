@@ -1,6 +1,9 @@
 # blob.js
 Create awesome svg blobs for your website.
 
+*Discontinuation Notice*: We archived this project to go after other projects. If you are interested in continuing our project, feel free to contact us (via: mail@philippmatth.es)!
+
+
 `UNDER DEVELOPMENT`
 
 ## Getting started
